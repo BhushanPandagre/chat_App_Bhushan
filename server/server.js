@@ -6,8 +6,14 @@ import userRoute from "./routes/userRoute.js";
 import messageRoute from "./routes/messageRoute.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
+
+const path = require("path")
+
+
 import { app, server } from "./socket/socket.js";
 dotenv.config({});
+
+const _dirname = path.resolve();
 
 const PORT = process.env.PORT || 5000;
 
@@ -24,6 +30,12 @@ app.use(cors(corsOption));
 // routes
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/message", messageRoute);
+
+app.use(express.static(path.join(_dirname, "/client/dist")))
+
+app.get('*', (_, res) => {
+    res.sendFile(path.resolve(_dirname, "client", "dist", "index.html"))
+})
 
 server.listen(PORT, () => {
   connectDB();

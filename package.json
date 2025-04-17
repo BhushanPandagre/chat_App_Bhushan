@@ -1,7 +1,25 @@
 {
+  "name": "server",
+  "version": "1.0.0",
+  "description": "chat application ",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server/server.js",
+    "build": "npm install && npm install --prefix client && npm run build --prefix client",
+    "start": "nodemon server/server.js"
+  },
+  "author": "bhushan pandagre",
+  "license": "ISC",
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.4",
-    "daisyui": "^5.0.23",
-    "tailwindcss": "^4.1.4"
+    "bcryptjs": "^3.0.2",
+    "body-parser": "^2.2.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.13.2",
+    "socket.io": "^4.8.1"
   }
 }
