@@ -2,11 +2,11 @@
 export default {
     content: [
       "./index.html",
-      "./src/**/*.{js,ts,jsx,tsx}",
+      "./src/**/*.{js,ts,jsx,tsx}",  // make sure this line exists
     ],
     theme: {
       extend: {},
     },
-    plugins: [require("daisyui")],
-  };
+    plugins: [require("daisyui")],  // <-- this is required for daisyUI
+  }
   

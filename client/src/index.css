@@ -1,6 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+
 
 body {
   background: url(../public/bg3.avif);
@@ -36,3 +38,12 @@ body {
    background: #1b1b1b;
    border-radius: 10px;
  }
+
+ .glass {
+  background: rgba(255, 255, 255, 0.1); /* translucent glass look */
+  backdrop-filter: blur(10px); /* blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* soft border */
+  border-radius: 1rem; /* rounded edges */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2); /* soft shadow */
+}
