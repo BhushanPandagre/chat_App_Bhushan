@@ -33,7 +33,7 @@ const Message = ({ message }) => {
       </div>
       <div
         className={`chat-bubble ${
-          message?.senderId !== authUser?._id ? "bg-gray-200 text-black" : ""
+          message?.senderId !== authUser?._id ? "  text-black" : ""
         } `}
       >
         {message?.message}

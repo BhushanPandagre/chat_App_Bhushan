@@ -29,7 +29,7 @@ const Login = () => {
       toast.success("Login successful!");
     } catch (error) {
       toast.error(error?.response?.data?.message || "Login failed");
-      console.log(error);
+ 
     }
     setUser({ username: "", password: "" });
   };
